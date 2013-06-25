@@ -102,8 +102,15 @@ public class JavaScriptInstrumenter {
 
         //an empty string will cause the parser to explode
         if (code.toString().trim().length() > 0){
-            parser.program();
-            result = tokens.toString();
+            try {
+                parser.program();
+                result = tokens.toString();
+            } catch (NullPointerException e) {
+                // When the parser finds a file not empty but with
+                // no code (e.g. a file with only comments), it
+                // throws a NullPointerException. This is an ugly
+                // hack to result in an empty string in those cases.
+            }
         }
     
         //close input stream in case writing to the same place
