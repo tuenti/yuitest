@@ -129,6 +129,9 @@ public class FileCoverageReport {
      */
     public double getCalledLinePercentage() throws JSONException {
         DecimalFormat twoDForm = new DecimalFormat("#.##");
+        if (getCoveredLineCount() == 0) {
+            return Double.valueOf(twoDForm.format(0));
+        }
 	return Double.valueOf(twoDForm.format(((double) getCalledLineCount() / (double) getCoveredLineCount()) * 100));
     }    
 
@@ -174,6 +177,9 @@ public class FileCoverageReport {
      */
     public double getCalledFunctionPercentage() throws JSONException {
         DecimalFormat twoDForm = new DecimalFormat("#.##");
+        if (getCoveredFunctionCount() == 0) {
+            return Double.valueOf(twoDForm.format(0));
+        }
 	return Double.valueOf(twoDForm.format(((double) getCalledFunctionCount() / (double) getCoveredFunctionCount()) * 100));
     }
 
