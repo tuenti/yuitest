@@ -1,0 +1,12 @@
+Package: yuitest
+Version: 0.7.9.tuenti1
+Section: misc
+Priority: optional
+Architecture: all
+Depends: java-virtual-machine
+Maintainer: Rafa de la Torre <rtorre@tuenti.com>
+Description: YUI Test is a complete testing framework for JavaScript and Web
+ applications. You can use the simple JavaScript syntax to write unit tests that
+ can be run in web browsers or on the command line, as well as functional tests
+ to be run in web browsers. Additional tools that build on top of the JavaScript
+ library's core functionality allow integration with build systems.
