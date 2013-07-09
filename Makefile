@@ -29,4 +29,14 @@ npm:
 
 test: testjava testjs
 
+deb:
+	@echo "Making debian package"
+	mkdir -p debian/usr/share/java \
+	  && cp java/build/yuitest-*.jar debian/usr/share/java \
+	  && dpkg-deb --build ./debian debian/yuitest_0.7.9-tuenti1.deb
+
+distclean:
+	rm debian/usr -rf
+	rm debian/*.deb -f
+
 .PHONY: java javascript test testjava testjs js testjavascript
