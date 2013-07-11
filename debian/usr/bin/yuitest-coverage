@@ -1,2 +1,2 @@
-#!/usr/bin/sh
+#!/bin/sh
 java -jar /usr/share/java/yuitest-coverage.jar
