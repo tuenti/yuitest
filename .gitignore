@@ -10,5 +10,5 @@ CVS/
 *~
 src/build.log
 .com.apple.timemachine.supported
-debian/usr
+debian/usr/share
 debian/*.deb
