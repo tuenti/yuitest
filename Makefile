@@ -35,8 +35,11 @@ deb: java testjava
 	  && cp java/build/yuitest-*.jar debian/usr/share/java \
 	  && dpkg-deb --build ./debian debian/yuitest_0.7.9-tuenti2.deb
 
-distclean:
-	rm debian/usr -rf
+clean:
+	rm java/build/* -rf
+
+distclean: clean
+	rm debian/usr/share -rf
 	rm debian/*.deb -f
 
 .PHONY: java javascript test testjava testjs js testjavascript
