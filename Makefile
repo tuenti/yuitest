@@ -33,7 +33,7 @@ deb: java testjava
 	@echo "Making debian package"
 	mkdir -p debian/usr/share/java \
 	  && cp java/build/yuitest-*.jar debian/usr/share/java \
-	  && dpkg-deb --build ./debian debian/yuitest_0.7.9-tuenti2.deb
+	  && dpkg-deb --build ./debian debian/yuitest_0.7.9-tuenti3.deb
 
 clean:
 	rm java/build/* -rf
