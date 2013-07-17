@@ -35,7 +35,10 @@ deb: java testjava
 	  && cp java/build/yuitest-*.jar debian/usr/share/java \
 	  && dpkg-deb --build ./debian debian/yuitest_0.7.9-tuenti3.deb
 
-distclean:
+clean:
+	rm java/build/* -rf
+
+distclean: clean
 	rm debian/usr/share -rf
 	rm debian/*.deb -f
 

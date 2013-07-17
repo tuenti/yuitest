@@ -12,3 +12,4 @@ src/build.log
 .com.apple.timemachine.supported
 debian/usr/share
 debian/*.deb
+java/build/*
